@@ -12,7 +12,7 @@ DeckOfCards::DeckOfCards(){
             deck[row][column] = 0;
         }
     }
-    srand( time(0));
+    srand( time(0) );
 }
 
 void DeckOfCards::shuffle(){
@@ -39,8 +39,8 @@ void DeckOfCards::deal(){
         for (int row = 0; row <= 3; row++) {
             for (int column = 0; column <= 12; column++) {
                 if (deck[row][column] == card){
-                    cout << stew(5) << right << face[column]
-                            << "of" << setw(8) << left << suit[row]
+                    cout << setw(5) << right << face[column]
+                            << " of " << setw(8) << left << suit[row]
                                << (card % 2 == 0 ? '\n' : '\t');
                 }
             }
